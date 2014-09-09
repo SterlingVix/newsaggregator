@@ -1,6 +1,6 @@
 {
   "name": "newsaggregator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -23,6 +23,7 @@
     "angular": "~1.2.21",
     "angular-ui-router": "~0.2.10",
     "bookshelf": "~0.7.7",
+    "cors": "^2.4.1",
     "express": "~4.8.5",
     "jasmine": "~2.0.1",
     "passport": "~0.2.0",
