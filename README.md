@@ -8,7 +8,7 @@ New Saggregator is Indigo Iago’s fork of Sean Chen, Matt Kim, Eteinne Tripier,
   - __Product Owner__: A&J
   - __Scrum Master__: I
   - __Chief Developer__: W
-  - 
+
 ## Table of Contents
 
 1. [Usage](#Usage)
