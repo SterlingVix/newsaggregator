@@ -15,11 +15,8 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## New Saggregator ##
-# It’s not news. It ain’t an alligator. Who knows what the hell it is. #
+# Itâ€™s not news. It ainâ€™t an alligator. Who knows what the hell it is. #
 
 
-## Something’s happening here… ##
-And we’ll tell you what it is as soon as we know!
-
-## What Iago is saying about CatchEmAll ##
-… This isn’t Catchem! Are we working on Catchem now?
+## Somethingâ€™s happening hereâ€¦ ##
+And weâ€™ll tell you what it is as soon as we know!
