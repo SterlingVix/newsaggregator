@@ -25,15 +25,16 @@ New Saggregator is Indigo Iago’s fork of Sean Chen, Matt Kim, Eteinne Tripier,
 
 ## Requirements
 
-- Node 0.10.x
-- Sqlite3 2.2.x
 - Angular 1.2.x & Angular UI Router 0.2.x
-- Jasmine 2.0.x
 - Bookshelf 0.7.x
+- Cors 2.4.x
 - Express 4.8.x
+- Jasmine 2.0.x
+- Knex 0.6.x
+- Node 0.10.x
 - Passport 0.2.x
 - q 1.0.x
-- Knex 0.6.x
+- Sqlite3 2.2.x
 
 ## Development
 In development. I know, I know…
