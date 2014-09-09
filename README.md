@@ -1,13 +1,13 @@
-# NewsAggregator
+﻿# News Aggregator
 
-News aggregator that integrates with a variety of different content APIs.
+News Aggregator is Indigo Iago’s fork of Sean Chen, Matt Kim, Eteinne Tripier, and Sam Puth’s News Aggregator project. It that integrates with a variety of different content APIs. It’s our plan to wreck it something fierce.
+
 
 ## Team
 
-  - __Product Owner__: Sam Puth
-  - __Scrum Master__: Sean Chen
-  - __Chief Backend Developer__: Etienne Tripier
-  - __Chief Frontend Devloper__: Matt Kim
+  - __Product Owner__: Aaron & Jim
+  - __Scrum Master__: Iago
+  - __Chief Developer__: Wesley
 
 ## Table of Contents
 
@@ -21,25 +21,31 @@ News aggregator that integrates with a variety of different content APIs.
 
 ## Usage
 
-> Some usage instructions
+> Well, first you need to log in...
 
 ## Requirements
 
-- Node 0.10.x
-- Sqlite3 2.2.x
-- Angular 1.2.x
+- Angular 1.2.x & Angular UI Router 0.2.x
+- Bookshelf 0.7.x
+- Cors 2.4.x
+- Express 4.8.x
 - Jasmine 2.0.x
+- Knex 0.6.x
+- Node 0.10.x
+- Passport 0.2.x
+- q 1.0.x
+- Sqlite3 2.2.x
 
 ## Development
+In development.
+
 
 ### Installing Dependencies
 
 From within the root directory:
 
 ```sh
-sudo npm install -g bower
 npm install
-bower install
 ```
 
 ### Roadmap
@@ -49,3 +55,4 @@ View the project roadmap [here](https://github.com/Northern-Moose/newsaggregator
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
