@@ -1,13 +1,13 @@
-# New Saggregator
+﻿# News Aggregator
 
-New Saggregator is Indigo Iago’s fork of Sean Chen, Matt Kim, Eteinne Tripier, and Sam Puth’s News Aggregator project. It that integrates with a variety of different content APIs. It’s our plan to wreck it something fierce.
+News Aggregator is Indigo Iago’s fork of Sean Chen, Matt Kim, Eteinne Tripier, and Sam Puth’s News Aggregator project. It that integrates with a variety of different content APIs. It’s our plan to wreck it something fierce.
 
 
 ## Team
 
-  - __Product Owner__: A&J
-  - __Scrum Master__: I
-  - __Chief Developer__: W
+  - __Product Owner__: Aaron & Jim
+  - __Scrum Master__: Iago
+  - __Chief Developer__: Wesley
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ New Saggregator is Indigo Iago’s fork of Sean Chen, Matt Kim, Eteinne Tripier,
 
 ## Usage
 
-> Well, first you need to log in…
+> Well, first you need to log in...
 
 ## Requirements
 
@@ -37,7 +37,7 @@ New Saggregator is Indigo Iago’s fork of Sean Chen, Matt Kim, Eteinne Tripier,
 - Sqlite3 2.2.x
 
 ## Development
-In development. I know, I know…
+In development.
 
 
 ### Installing Dependencies
