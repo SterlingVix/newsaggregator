@@ -38,9 +38,9 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.5.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-nodemon": "^0.3.0"
+    "grunt-nodemon": "^0.3.0",
     "sqlite3": "~2.2.7",
     "ejs": "~1.0.0",
-    "body-parser": "~1.8.1"
+    "body-parser": "~1.8"
   }
 }
