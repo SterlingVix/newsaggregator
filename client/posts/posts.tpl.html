@@ -1,3 +1,4 @@
+<h2>This is the posts.tpl.html file</h2>
 <img class="icon" src="./assets/reddit.png"><h3><a href="http://www.reddit.com{{ post.permalink }}" ng-click="getHTML('http://www.reddit.com{{ post.permalink }}')">{{ post.title }}</a></h3>
 {{ post.author }}
 {{ post.selftext }} {{ post.subreddit}}
@@ -6,4 +7,12 @@
 <hr>
 
 
+<!-- Status of models:
+post.permalink  = {{ post.permalink }}<br>    BROKEN!
+post.title  = {{ post.title }}<br>
+post.author  = {{ post.author }}<br>    BROKEN!
+post.selftext  = {{ post.selftext }}<br>    BROKEN!
+post.subreddit = {{ post.subreddit}}<br>    BROKEN!
+post.selftext | limitTo: 25 = {{ post.selftext | limitTo: 25}}<br>    BROKEN!
+-->
 <!-- <img class="thumbnail" src="{{ post.thumbnail }}"> -->

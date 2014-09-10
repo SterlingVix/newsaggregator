@@ -1,8 +1,11 @@
-<div>
-  Search:<input ng-model="query">
-</div>
+<div style="border: 2px solid blue; ">
+    <h2>This is the posts.html file</h2>
+    Search:
+    <input ng-model="query">
 
-<ul class="allPosts" style="list-style: none;" ng-controller="getHTMLController">
-	<view-post post="post" ng-repeat="post in post | orderBy:'createdAt' | filter:query">
-	</view-post>
-</ul>
+  <ul class="allPosts" style="list-style: none; border: 2px solid blue;" ng-controller="getHTMLController">
+  <h2>This is the posts.html file inside the ul element</h2>
+    <view-post post="post" ng-repeat="post in post | orderBy:'createdAt' | filter:query">
+    </view-post>
+  </ul>
+</div>
