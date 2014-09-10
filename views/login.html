@@ -1,13 +1,11 @@
 <!DOCTYPE html>
+<!-- NOTE: Refactoring the main Angular data out of Login and into Index
 
-<!-- Make sure this matches the other ng-app names throughout our application -->
-<html data-ng-app="PersNewsAgg">
-
+Make sure this matches the other ng-app names throughout our application
+<html data-ng-app="PersNewsAgg"> -->
+<html>
   <head>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" type="text/css" />
-    <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
-    <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="http://rawgithub.com/Ciul/angular-facebook/master/lib/angular-facebook.js"></script>
-    <script src="script.js"></script>
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" type="text/css" />
   </head>
 
   <body data-ng-controller="LoginController">
@@ -28,7 +26,7 @@
           <button type="button" class="btn btn-danger btn-large" data-ng-show="logged" data-ng-disabled="!facebookReady" data-ng-click="logout()">Logout</button>
           
           <!-- Comment this div out when deploying the app -->
-<!--      <div>
+    <!--      <div>
             <debug val="user"></debug>
           </div> -->
           

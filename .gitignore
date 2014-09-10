@@ -34,3 +34,6 @@ bower_components/
 
 # Stuff in Client folder
 client/.sass-cache/
+
+# Database file
+main.sqlite
