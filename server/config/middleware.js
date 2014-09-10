@@ -8,7 +8,18 @@ module.exports = function (app, express) {
   app.use(express.static(path.join(__dirname, '/../../client')));
 
   // Each api gets its own router
-  var redditRouter = express.Router();
-  var nprRouter = express.Router();
+  var routers = {};
+  routers.reddit = express.Router();
+  routers.npr    = express.Router();
+
+  app.use('/api/reddit', routers.reddit);
+  app.use('/api/npr', routers.npr);
+
+  app.get('/*', function(req, res) {
+    res.redirect('/');
+  });
+
+  require('../reddit/movieRoutes.js')(routers.reddit);
+  require('../npr/yelpRoutes.js')(routers.npr);
 
 };
