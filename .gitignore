@@ -37,4 +37,8 @@ client/.sass-cache/
 client/lib/
 
 # Database file
+# db/data/main.sqlite
+# db/data/
+# db/data/*
+# db/data/*.*
 main.sqlite

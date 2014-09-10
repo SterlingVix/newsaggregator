@@ -28,14 +28,39 @@
   <script src="./app.js"></script>
 </head>
 
-<body>
-  <div class="site-menu" style="border: 0px solid black; ">
-  </div>
-  <h1>Pers</h1>
+<body ng-app="app" ng-init="red=155; green=155; blue=155;"><h1>
+  <div class="site-menu" style="border: 2px solid black; height: 100px;">
+    Red: <input type="number" min="0" max="255" ng-model="red" style="height:52px">
+    Green: <input type="number" min="0" max="255" ng-model="green" style="height:52px">
+    Blue: <input type="number" min="0" max="255" ng-model="blue" style="height:52px">
+  </div></h1>
   <div class="container">
-    <div ng-app="app">
+    <div>  
+      <!-- the ng-view directive is where our templates will be loaded during navigation -->
       <div class="posts" ui-view></div>
+
+
+<!--         Each post appears here in this format. The code is in posts.html. 
+  <ul class="allPosts ng-scope" style="list-style: none;" ng-controller="getHTMLController">
+    ngRepeat: post in post | orderBy:'createdAt' | filter:query
+        <view-post post="post" ng-repeat="post in post | orderBy:'createdAt' | filter:query" class="ng-isolate-scope ng-scope ng-binding">
+        <img class="icon" src="./assets/reddit.png">
+        <h3><a href="http://www.reddit.com" ng-click="getHTML('http://www.reddit.com')" class="ng-binding">Forget Tesla. If you really want to reduce vehicle emissions, it’s unglamorous buses, not flashy sedans, that need to go electric.</a></h3>  -->
+       
+        
+
+      <!-- the iframe element is on the right of the main page and collects feeds. -->
       <iframe id="articleFrame" src="./iframe.html" name="iframe_a">
+
+
+
+ 
+<br>
+
+<!-- <img class="thumbnail" src="{{ post.thumbnail }}"> -->
+<hr></view-post>
+
+
         <add attr="X-Frame-Options" value="ALLOW-FROM http://www.reddit.com" />
       </iframe>
     </div>
