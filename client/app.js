@@ -4,13 +4,16 @@ angular.module('app', [
   'ui.router'
 ])
 
-.config(['$stateProvider', function($stateProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/',
       templateUrl: 'posts/posts.html',
       controller: 'PostsController'
     });
+
+  $urlRouterProvider.otherwise('/');
+    
 }])
 
 
