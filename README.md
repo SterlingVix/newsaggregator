@@ -37,7 +37,11 @@ News Aggregator is Indigo Iago’s fork of Sean Chen, Matt Kim, Eteinne Tripier,
 - Sqlite3 2.2.x
 
 ## Development
-In development.
+To develop using sass, go on the client folder, and on your terminal run:
+```
+compass watch
+```
+Should be integrated on grunt task soon.
 
 
 ### Installing Dependencies
@@ -46,6 +50,11 @@ From within the root directory:
 
 ```sh
 npm install
+```
+
+If you want to change the css's, install compass first.
+```
+gem install compass 
 ```
 
 ### Roadmap
