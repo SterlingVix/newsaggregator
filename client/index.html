@@ -29,15 +29,17 @@
 </head>
 
 <body>
-  <div class="site-menu" style="border: 0px solid black; ">
-  </div>
-  <h1>Pers</h1>
-  <div class="container">
-    <div ng-app="app">
-      <div class="posts" ui-view></div>
-      <iframe id="articleFrame" src="./iframe.html" name="iframe_a">
-        <add attr="X-Frame-Options" value="ALLOW-FROM http://www.reddit.com" />
-      </iframe>
+  <div ui-view> <!-- Our new main angular view -->
+    <div class="site-menu" style="border: 0px solid black; ">
+    </div>
+    <h1>Pers</h1>
+    <div class="container">
+      <div ng-app="app">
+        <div class="posts"></div> <!-- REFACTOR this to a <posts> directive... -->
+        <iframe id="articleFrame" src="./iframe.html" name="iframe_a">
+          <add attr="X-Frame-Options" value="ALLOW-FROM http://www.reddit.com" />
+        </iframe>
+      </div>
     </div>
   </div>
 </body>
