@@ -41,6 +41,6 @@
     "grunt-nodemon": "^0.3.0",
     "sqlite3": "~2.2.7",
     "ejs": "~1.0.0",
-    "body-parser": "~1.8.1"
+    "body-parser": "~1.8"
   }
 }
