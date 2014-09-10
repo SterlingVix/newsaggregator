@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var path = require('path');
 var cors = require('cors');
 var Q = require('q');
@@ -7,7 +8,8 @@ var dbRequest = require('./db/dbRequestHandler.js');
 
 var app = express();
 app.use(cors());
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, './client')));
 
 // This could, and should, become a cron job or other
@@ -27,9 +29,10 @@ app.get('/api/content', function(req, res) {
   });
 });
 
-// This will redirect to our Angular client
-app.get('/', function(req, res) {
-  res.render('index');
+
+// redirect all other request to root
+app.get('/*', function(req, res) {
+  res.redirect('/');
 });
 
 var port = process.env.PORT || 8080;
