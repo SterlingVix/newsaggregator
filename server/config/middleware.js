@@ -5,7 +5,8 @@ module.exports = function (app, express) {
   // Middleware dependencies used in routes
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: true}));
-  app.use(express.static(path.join(__dirname, '/../../client')));
+  app.use(express.static(__dirname + '/../../client'));
+  
 
   // Each api gets its own router
   var routers = {};
@@ -19,7 +20,7 @@ module.exports = function (app, express) {
     res.redirect('/');
   });
 
-  require('../reddit/movieRoutes.js')(routers.reddit);
-  require('../npr/yelpRoutes.js')(routers.npr);
+  require('../reddit/routes.js')(routers.reddit);
+  require('../npr/routes.js')(routers.npr);
 
 };
