@@ -1,5 +1,5 @@
 var http  = require('http'),
-    keys  = require('../keys.js'),
+    // keys  = require('../keys.js'), // Aaron commented out because it's not working...?
     defer = require('q').defer();
 
 module.exports = {

@@ -1,20 +1,43 @@
-angular.module('app', [
+angular.module('newsaggregator', [
   'posts',
   'ngRoute',
   'ui.router'
 ])
+// angular.module('app', [
+//   'viewparent',
+//   'posts',
+//   'ngRoute',
+//   'ui.router'
+// ])
+// .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+//   $stateProvider
+//     .state('home', {
+//       url: '/',
+//       // templateUrl: 'posts/posts.html',
+//       // controller: 'PostsController'
+//       templateUrl: 'viewparent/viewparent',
+//       controller: 'ParentController'
+//     });
 
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+//   $urlRouterProvider.otherwise('/');
+    
+// }])
+.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'posts/posts.html',
-      controller: 'PostsController'
+      templateUrl: 'viewparent/viewparent.template.html',
+      controller: 'ParentController'
     });
 
   $urlRouterProvider.otherwise('/');
-    
-}])
+
+  // We add our $httpInterceptor into the array
+  // of interceptors. Think of it like middleware for your ajax calls
+  // [interceptors](https://github.com/angular/angular.js/blob/master/src/ng/http.js#L337)
+  // $httpProvider.interceptors.push('AttatchTokens');
+  
+})
 
 
 .factory('GetPosts', function ($http, $q) {
