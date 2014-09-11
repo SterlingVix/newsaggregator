@@ -1,0 +1,178 @@
+/*
+Design based on Material Design
+http://www.google.com/design/spec/material-design/introduction.html
+*/
+/* Variables */
+/* Mixins */
+/* Shadows */
+/* Roboto Font */
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+/* Box sizing */
+/* line 50, ../sass/style.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 53, ../sass/style.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 57, ../sass/style.scss */
+body {
+  background-color: #fafafa;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+/* Top bar */
+/* line 64, ../sass/style.scss */
+.title {
+  z-index: 1;
+  /*position: fixed;*/
+  left: 0;
+  right: 0;
+  background-color: #3f51b5;
+  color: white;
+  padding: 16px;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+}
+/* line 74, ../sass/style.scss */
+.title h2 {
+  margin: 0;
+  display: inline;
+}
+/* line 79, ../sass/style.scss */
+.title .menu {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  border: 0;
+  background-size: 24px 24px;
+  background: transparent center center no-repeat;
+  background-image: url("http://material-design.storage.googleapis.com/images/hamburger.svg");
+  /*background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><path fill='%23ffffff' d='M0,1h26v2H0V1z M0,12h26v2H0V12z M0,23h26v2H0V23z'/></svg>");*/
+}
+
+/* Posts content area */
+/* line 92, ../sass/style.scss */
+.posts {
+  width: 50%;
+  float: left;
+}
+/* line 96, ../sass/style.scss */
+.posts .search {
+  text-align: center;
+}
+/* line 98, ../sass/style.scss */
+.posts .search input {
+  width: 95%;
+  font-size: 20px;
+  padding: 16px;
+  margin: 16px 0;
+  border: 0;
+  background-color: white;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.24);
+}
+/* line 108, ../sass/style.scss */
+.posts .search input:hover {
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+}
+/* line 111, ../sass/style.scss */
+.posts .search input:focus {
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+}
+
+/* List of Posts (List view) */
+/* line 118, ../sass/style.scss */
+.allPosts {
+  padding: 0;
+  margin: 0;
+}
+/* line 122, ../sass/style.scss */
+.allPosts a {
+  color: #757575;
+  text-decoration: none;
+  display: block;
+  background-color: white;
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+/* line 131, ../sass/style.scss */
+.allPosts a:hover {
+  background-color: #f5f5f5;
+}
+/* line 135, ../sass/style.scss */
+.allPosts .icon {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  border-radius: 25px;
+  margin: 0 16px 0 0;
+  float: left;
+}
+
+/* List of Posts (Card view) */
+/*.allPosts {
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: $gray-600;
+    text-decoration: none;
+    display: block;
+    width: 95%;
+    padding: 16px;
+    margin: 0 auto 16px auto;
+    background: white;
+    @include z-depth-1();
+    @include border-radius(2px);
+  }
+
+  a:hover {
+    background-color: $gray-100;
+    @include z-depth-2();
+  }
+
+  a:active {
+    background-color: $gray-100;
+    @include z-depth-3();
+  }
+
+  .icon {
+    $icon-width: 50px;
+    width: $icon-width;
+    height: $icon-width;
+    @include border-radius($icon-width/2);
+    margin: 0 16px 0 0;
+    float: left;
+  }
+}*/
+/* iFrame area */
+/* line 183, ../sass/style.scss */
+#articleFrame {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  float: right;
+  border: none;
+}
+
+/* line 191, ../sass/style.scss */
+.clear {
+  clear: both;
+}
