@@ -4,7 +4,7 @@
 // var cors = require('cors');
 // var Q = require('q');
 
-var dbRequest = require('./db/dbRequestHandler.js');
+// var dbRequest = require('./db/dbRequestHandler.js');
 
 // var app = express();
 // app.use(cors());
@@ -12,11 +12,11 @@ var dbRequest = require('./db/dbRequestHandler.js');
 // app.use(bodyParser.urlencoded({extended: true}));
 // app.use(express.static(path.join(__dirname, './client')));
 
-// This could, and should, become a cron job or other
-// external daemon
-setInterval(function() {
-  dbRequest.automaticApiAggregation();
-}, 5000);
+// // This could, and should, become a cron job or other
+// // external daemon
+// setInterval(function() {
+//   dbRequest.automaticApiAggregation();
+// }, 5000);
 
 // // This handles requests to our users table
 // app.post('/api/users', function(req, res) {
