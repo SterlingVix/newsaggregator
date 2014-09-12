@@ -3,6 +3,6 @@
     <input ng-model="query" placeholder="Search" />
   </div>
   <ul class="allPosts">
-    <viewpost ng-repeat="post in posts" postdata="post"></viewpost>
+    <viewpost ng-repeat="post in posts | filter:query" postdata="post"></viewpost>
   </ul>
 </div>
