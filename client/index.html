@@ -1,50 +1,76 @@
+<!DOCTYPE html>
 <html ng-app="newsaggregator">
 <!-- <html ng-app="viewparent" ng-controller="ParentController as ParentController">
 ParentController variables are now accessible as ParentController.varName -->
 <!-- <html data-ng-app="PersNewsAgg"> -->
+
 <head>
   <title>NewsAggregator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" type="text/css" href="./styles/css/style.css">
-  <!-- <script src="./bower_components/oauth-js/dist/oauth.js"></script>
-    <script src="../db/data/main.sqlite"></script>
-    <script src="../db/dbRequestHandler.js"></script> -->
-  <!--     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" type="text/css" />
-    <script src="script.js"></script> -->
-  <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
-
-  <script src="./lib/angular/lib/angular.js"></script>
-
-  <script src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="./posts/getHtml.controller.js"></script>
-  <script src="./posts/posts.dir.js"></script>
-  <script src="./posts/posts.controller.js"></script>
-  <script src="./app.js"></script>
+    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" type="text/css" /> -->
 </head>
 
 <body>
   <div ui-view>
+    <!-- Our new main angular view -->
+    <!--   <div ng-app="app"></div> -->
 
-  <div class="title">
-    <button class="menu"></button>
-    <h2>Pers</h2>
+    <!-- COMMENTING OUT for new view injection testing. -->
+    <!--     <div class="site-menu" style="border: 0px solid black; ">
+</div>
+<h1>Pers</h1>
+<div class="container">
+<div ng-app="app">
+<div class="posts"></div>  -->
+    <!-- REFACTOR this to a <posts> directive... -->
+    <!--         <iframe id="articleFrame" src="./iframe.html" name="iframe_a">
+<add attr="X-Frame-Options" value="ALLOW-FROM http://www.reddit.com" />
+</iframe>
+</div>
+</div> -->
   </div>
+
+
+
+
+    <!-- load dependencies here -->
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="/lib/angular-ui-router/release/angular-ui-router.js"></script>
+<!--   // <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script> -->
+
+  <!-- <script src="facebook/script.js"></script> -->
+  <script src="app.js"></script>
+  <script src="viewfeed/FeedController.js"></script>
+  <!--   // <script src="viewfeed/viewfeed.template.html"></script> -->
+  <script src="viewheader/HeaderController.js"></script>
+  <!--   // <script src="viewheader/viewheader.template.html"></script> -->
+  <script src="viewiframe/IframeController.js"></script>
+  <!--   // <script src="viewiframe/viewiframe.template.html"></script> -->
+  <script src="viewparent/ParentController.js"></script>
+  <!--   // <script src="viewparent/viewparent.template.html"></script> -->
   
-  <!-- Our new main angular view -->
-<!--   <div ng-app="app"></div> -->
-    
-<!-- COMMENTING OUT for new view injection testing. -->
-<!--     <div class="site-menu" style="border: 0px solid black; ">
-    </div>
-    <h1>Pers</h1>
-    <div class="container">
-      <div ng-app="app">
-        <div class="posts"></div>  --><!-- REFACTOR this to a <posts> directive... -->
-<!--         <iframe id="articleFrame" src="./iframe.html" name="iframe_a">
-          <add attr="X-Frame-Options" value="ALLOW-FROM http://www.reddit.com" />
-        </iframe>
-      </div>
-    </div> -->
-  </div>
 </body>
 
 </html>
+
+
+
+<!-- 
+.directive('debug', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      expression: '= val'
+    },
+    template: '<pre>{{debug(expression)}}</pre>',
+    link: function(scope) {
+      scope.debug = function(exp) {
+        return angular.toJson(exp, true);
+      };
+    }
+  }
+}); -->
