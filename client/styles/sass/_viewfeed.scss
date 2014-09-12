@@ -1,0 +1,91 @@
+.search {
+  background-color: $gray-200;
+  text-align: center;
+  input {    
+    width: 95%;
+    font-size: 20px;
+    padding: 16px;
+    margin: 16px 0;
+    border: 0;
+    background-color: white;
+    @include border-radius(2px);
+    @include z-depth-1();
+  }
+  input:hover {
+    @include z-depth-2();
+  }
+  input:focus {
+    @include z-depth-2();
+  }
+}
+
+/* Posts content area */
+.posts {
+  width: 50%;
+  float: left;
+}
+
+/* List of Posts (List view) */
+.allPosts {
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: $gray-600;
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    padding: 16px;
+    border-bottom: 1px solid $gray-300;
+  }
+
+  a:hover {
+    background-color: $gray-100;
+  }
+
+  .icon {
+    $icon-width: 50px;
+    width: $icon-width;
+    height: $icon-width;
+    @include border-radius($icon-width/2);
+    margin: 0 16px 0 0;
+    float: left;
+  }
+}
+
+/* List of Posts (Card view) */
+/*.allPosts {
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: $gray-600;
+    text-decoration: none;
+    display: block;
+    width: 95%;
+    padding: 16px;
+    margin: 0 auto 16px auto;
+    background: white;
+    @include z-depth-1();
+    @include border-radius(2px);
+  }
+
+  a:hover {
+    background-color: $gray-100;
+    @include z-depth-2();
+  }
+
+  a:active {
+    background-color: $gray-100;
+    @include z-depth-3();
+  }
+
+  .icon {
+    $icon-width: 50px;
+    width: $icon-width;
+    height: $icon-width;
+    @include border-radius($icon-width/2);
+    margin: 0 16px 0 0;
+    float: left;
+  }
+}*/

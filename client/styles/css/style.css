@@ -2,23 +2,85 @@
 Design based on Material Design
 http://www.google.com/design/spec/material-design/introduction.html
 */
-/* Variables */
-/* Mixins */
-/* Shadows */
 /* Roboto Font */
 @import url(http://fonts.googleapis.com/css?family=Roboto);
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
 /* Box sizing */
-/* line 50, ../sass/style.scss */
+/* line 2, ../sass/_viewparent.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 5, ../sass/_viewparent.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 9, ../sass/_viewparent.scss */
 body {
   background-color: #fafafa;
   font-family: 'Roboto', sans-serif;
@@ -26,8 +88,8 @@ body {
 }
 
 /* Top bar */
-/* line 64, ../sass/style.scss */
-.title {
+/* line 16, ../sass/_viewparent.scss */
+.viewheader {
   z-index: 1;
   /*position: fixed;*/
   left: 0;
@@ -35,17 +97,17 @@ body {
   background-color: #3f51b5;
   color: white;
   padding: 16px;
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
 }
-/* line 74, ../sass/style.scss */
-.title h2 {
+/* line 26, ../sass/_viewparent.scss */
+.viewheader .title {
   margin: 0;
   display: inline;
 }
-/* line 79, ../sass/style.scss */
-.title .menu {
+/* line 31, ../sass/_viewparent.scss */
+.viewheader .menu {
   width: 24px;
   height: 24px;
   margin-right: 16px;
@@ -56,52 +118,58 @@ body {
   /*background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><path fill='%23ffffff' d='M0,1h26v2H0V1z M0,12h26v2H0V12z M0,23h26v2H0V23z'/></svg>");*/
 }
 
-/* Posts content area */
-/* line 92, ../sass/style.scss */
-.posts {
-  width: 50%;
-  float: left;
+/* line 43, ../sass/_viewparent.scss */
+.clear {
+  clear: both;
 }
-/* line 96, ../sass/style.scss */
-.posts .search {
+
+/* line 1, ../sass/_viewfeed.scss */
+.search {
+  background-color: #eeeeee;
   text-align: center;
 }
-/* line 98, ../sass/style.scss */
-.posts .search input {
+/* line 4, ../sass/_viewfeed.scss */
+.search input {
   width: 95%;
   font-size: 20px;
   padding: 16px;
   margin: 16px 0;
   border: 0;
   background-color: white;
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.24);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 1px;
 }
-/* line 108, ../sass/style.scss */
-.posts .search input:hover {
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+/* line 14, ../sass/_viewfeed.scss */
+.search input:hover {
+  -moz-box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
 }
-/* line 111, ../sass/style.scss */
-.posts .search input:focus {
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.23);
+/* line 17, ../sass/_viewfeed.scss */
+.search input:focus {
+  -moz-box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 3px;
+}
+
+/* Posts content area */
+/* line 23, ../sass/_viewfeed.scss */
+.posts {
+  width: 50%;
+  float: left;
 }
 
 /* List of Posts (List view) */
-/* line 118, ../sass/style.scss */
+/* line 29, ../sass/_viewfeed.scss */
 .allPosts {
   padding: 0;
   margin: 0;
 }
-/* line 122, ../sass/style.scss */
+/* line 33, ../sass/_viewfeed.scss */
 .allPosts a {
   color: #757575;
   text-decoration: none;
@@ -110,17 +178,16 @@ body {
   padding: 16px;
   border-bottom: 1px solid #e0e0e0;
 }
-/* line 131, ../sass/style.scss */
+/* line 42, ../sass/_viewfeed.scss */
 .allPosts a:hover {
   background-color: #f5f5f5;
 }
-/* line 135, ../sass/style.scss */
+/* line 46, ../sass/_viewfeed.scss */
 .allPosts .icon {
   width: 50px;
   height: 50px;
-  -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
+  -webkit-border-radius: 25px;
   border-radius: 25px;
   margin: 0 16px 0 0;
   float: left;
@@ -162,17 +229,3 @@ body {
     float: left;
   }
 }*/
-/* iFrame area */
-/* line 183, ../sass/style.scss */
-#articleFrame {
-  width: 50%;
-  height: 100%;
-  position: fixed;
-  float: right;
-  border: none;
-}
-
-/* line 191, ../sass/style.scss */
-.clear {
-  clear: both;
-}

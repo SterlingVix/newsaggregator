@@ -1,7 +1,7 @@
 angular.module('posts', [
   'posts.directive',
   'getHTML'
-//   ])
+])
 
   .controller('PostsController', function($scope, GetPosts) {
     $scope.post=[];
