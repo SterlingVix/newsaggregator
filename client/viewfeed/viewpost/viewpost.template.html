@@ -1,16 +1,14 @@
-<div class="postdiv">
-  <li>
-
-    <a href="http://www.reddit.com/{{ post.url }}" target="iframe_a"> <!-- TODO: make this iframe work! -->
+  <div class="postdiv">
+  <li class="postli">
+    <a href="http://www.reddit.com/{{ postdata.url }}"> <!-- no iFrame -->
       <img class="icon" src="./assets/reddit.png">
-      <span>{{ post.title }}</span>
+      <span>{{ postdata.title }}</span>
       <div class="clear"></div>
     </a>
-    <!-- {{ post.author }}
+    {{ post.author }}
     {{ post.selftext }} {{ post.subreddit}}
     <br>
-    {{ post.selftext | limitTo: 25}} -->
+    {{ post.selftext | limitTo: 25}}
     <!-- <img class="thumbnail" src="{{ post.thumbnail }}"> -->
   </li>
-</div>
-
+  </div>
