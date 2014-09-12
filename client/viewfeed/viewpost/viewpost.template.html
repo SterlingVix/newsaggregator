@@ -1,7 +1,7 @@
 <li class="postli">
   <a href="http://www.reddit.com/{{ postdata.permalink }}">
     <!-- no iFrame -->
-    <img class="thumbnail" src="{{ postdata.thumbnail }}">
+    <div ng-if="postdata.thumbnail != 'self'"><img class="thumbnail" src="{{ postdata.thumbnail }}"></div>
     <!-- if (thumbnail === 'self') {show reddit icon; else show thumbnail} -->
     <div>
       <span class="posttitle">{{ postdata.title }}</span>
@@ -9,6 +9,8 @@
       <div class="author">Author: {{ postdata.author }}</div>
       <div class="subreddit">subreddit: {{ postdata.subreddit }}</div>
     </div>
+
+    <div class="clear"></div>
   </a>
 </li>
 

@@ -193,6 +193,10 @@ body {
   margin: 0 16px 0 0;
   float: left;
 }
+/* line 55, ../sass/_viewfeed.scss */
+.allPosts .thumbnail {
+  float: right;
+}
 
 /* List of Posts (Card view) */
 /*.allPosts {
