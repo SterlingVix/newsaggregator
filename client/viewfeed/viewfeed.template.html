@@ -1,10 +1,10 @@
-<div class="feeddiv" >
-  <ul class="allPosts" style="list-style: none;" ng-controller="PostController"> <!-- PostsControleer renamed from getHTMLController -->
-
+<div class="feeddiv">
+  <ul class="allPosts">
     <!--   <ul class="allPosts" style="list-style: none;" ng-controller="getHTMLController"> -->
     <!--     <view-post post="post" ng-repeat="post in post | orderBy:'createdAt' | filter:query">
         </view-post> -->
-    <viewpost></viewpost>
-    <viewpost post="post" ng-repeat="post in post | orderBy:'createdAt' | filter:query"></viewpost>
+    <viewpost ng-repeat="post in posts" postdata="post"></viewpost>
+
+
   </ul>
 </div>
