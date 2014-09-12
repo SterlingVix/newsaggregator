@@ -1,15 +1,66 @@
 angular.module('newsaggregator.viewparent', [
   'viewparent.viewheader',
   'viewparent.viewfeed',
-  // 'viewparent.viewfeed.viewpost',
-  'viewparent.viewiframe',
+  'viewparent.viewiframe'
 ])
-.controller('ParentController', [function($scope) {
-  // functions here
-}]);
+  .controller('ParentController', function($rootScope, $scope, Posts) {
+    // $scope.apiRoute = '/api/reddit'; // we should modularize lateer...
+    var self = this;
+    $scope.apiData = [];
+    // $rootScope.tempArray = [];
+
+    Posts.get( $scope ).then(function(response) {
+      // angular.forEach(response, function(value, key) {
+      var postsArray = [];
+
+      var parsed = angular.fromJson(response.data) // parses the data object
+      var parsedLength = parsed.data.children.length;
+
+      for (var i = 0; i < parsedLength; i++) {
+        var thisPostObject = parsed.data.children[i].data;
+        postsArray.push(thisPostObject);
+      } // push all post objects to array
+
+      $scope.apiData = $scope.makeConformantPosts(postsArray);
+    }); // end Posts.get().then()
+
+    $scope.makeConformantPosts = function(arrayOfPosts) {
+      var result = [];
+
+      for (var i = 0; i < arrayOfPosts.length; i++) {
+        var conformantObject = {
+          author:     arrayOfPosts[i].author,
+          created:    arrayOfPosts[i].created,
+          name:       arrayOfPosts[i].name,
+          permalink:  arrayOfPosts[i].permalink,
+          selftext:   arrayOfPosts[i].selftext,
+          score:      arrayOfPosts[i].score,
+          subreddit:  arrayOfPosts[i].subreddit,
+          thumbnail:  arrayOfPosts[i].thumbnail,
+          title:      arrayOfPosts[i].title,
+          url:        arrayOfPosts[i].url,
+          visited:    arrayOfPosts[i].visited
+        };
+        result.push(conformantObject);
+      } // end (iterate over array)
+      return result; // return arrays
+    }; // end $scope.makeConformantPosts(arrayOfPosts)
 
 
-// .directive('debug', function() {
+  })
+  .factory('Posts', function($http, $q) {
+    return {
+      get: function() {
+        var deferred = $q.defer();
+        $http.get('/api/reddit').success(function(res) {
+          deferred.resolve(res);
+        });
+        return deferred.promise;
+      } // end get()
+    }; // return get()
+  }); // end factory
+
+// .directive('debug', function() { // FOR DEBUGGING
 //   return {
 //     restrict: 'E',
 //     scope: {

@@ -1,7 +1,9 @@
 angular.module('viewparent.viewfeed.viewpost', [])
-
 .controller('PostController', function($scope, $http, $q) {  //OLD:  .controller('PostsController', function($scope, GetPosts) {
     var self = this;
+    var currentRoute = ''; // for dynamically changing route
+    var nprRoute = '/api/npr';
+    var redditRoute = '/api/reddit';
 
     // var post=[]; // an array of individual posts(?)
     var postsArray = [];
@@ -12,9 +14,8 @@ angular.module('viewparent.viewfeed.viewpost', [])
 
 
   self.getPostsFromDb = function() { // Get the posts from DB
-    $http.get('/api/content') // end http.get()
+    $http.get('/api/reddit') // end http.get()
     .success(function(response) { // Success
-      // debugger;
       deferred.resolve(response);
       console.log("deferred: ", deferred);
 
@@ -24,7 +25,7 @@ angular.module('viewparent.viewfeed.viewpost', [])
       angular.forEach(response, function(value, key) {
         // debugger;
         postsArray.push(value);
-        $scope.post.push(value);
+        // $scope.post.push(value);
       }); // end angular.forEach(push posts)
     }); // end success().then()
   }; // end getPostsFromDb()
@@ -36,47 +37,47 @@ angular.module('viewparent.viewfeed.viewpost', [])
 
 
 
-    // var getPosts = function($http) {
-    // // $scope.getPosts = function($http, deferred) {
-    //   $http.get('http://127.0.0.1:8080/api/content')
-    //     .success(function(res) {
-    //       return res; // where is this returning?!
-    //     }) // end .success
-    //   .then(function(res) { ////////////////////
-    //     angular.forEach(res, function(value, key) {
-    //       $scope.post.push(value);
-    //     }); // end angular.forEach(push posts)
-    //   }); // end GetPosts.gotten().then()
-    // }; // end getPosts()
+    var getPosts = function($http) {
+    // $scope.getPosts = function($http, deferred) {
+      $http.get('http://127.0.0.1:8080/api/content')
+        .success(function(res) {
+          return res; // where is this returning?!
+        }) // end .success
+      .then(function(res) { ////////////////////
+        angular.forEach(res, function(value, key) {
+          $scope.post.push(value);
+        }); // end angular.forEach(push posts)
+      }); // end GetPosts.gotten().then()
+    }; // end getPosts()
 
-    // getPosts(); // invoke immediately. REFACTOR THIS OUT
-
-
+    getPosts(); // invoke immediately. REFACTOR THIS OUT
 
 
 
-    // var getPosts = function($http, deferred) {
-    // // $scope.getPosts = function($http, deferred) {
-    //   $http.get('http://127.0.0.1:8080/api/content')
-    //     .success(function(res) {
-    //       deferred.resolve(res);
-    //       return deferred.promise; // where is this returning?!
-    //     }) // end .success
-    //   .then(function(res) { ////////////////////
-    //     angular.forEach(res, function(value, key) {
-    //       $scope.post.push(value);
-    //     }); // end angular.forEach(push posts)
-    //   }); // end GetPosts.gotten().then()
-    // }; // end getPosts()
 
-    // getPosts(); // invoke immediately. REFACTOR THIS OUT
+
+    var getPosts = function($http, deferred) {
+    // $scope.getPosts = function($http, deferred) {
+      $http.get('http://127.0.0.1:8080/api/content')
+        .success(function(res) {
+          deferred.resolve(res);
+          return deferred.promise; // where is this returning?!
+        }) // end .success
+      .then(function(res) { ////////////////////
+        angular.forEach(res, function(value, key) {
+          $scope.post.push(value);
+        }); // end angular.forEach(push posts)
+      }); // end GetPosts.gotten().then()
+    }; // end getPosts()
+
+    getPosts(); // invoke immediately. REFACTOR THIS OUT
 
 }) // end controller PostController
 .directive('viewpost', function() {
   return {
     restrict: 'E',
     // scope: {data: '='},
-    scope: {post: '='},
+    scope: {postdata: '='},
     templateUrl: 'viewfeed/viewpost/viewpost.template.html'
     // replace: true
   }; // end return for viewfeed
