@@ -105,8 +105,9 @@ body {
 .viewheader .title {
   margin: 0;
   display: inline;
+  font-size: 24px;
 }
-/* line 31, ../sass/_viewparent.scss */
+/* line 32, ../sass/_viewparent.scss */
 .viewheader .menu {
   width: 24px;
   height: 24px;
@@ -118,7 +119,7 @@ body {
   /*background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><path fill='%23ffffff' d='M0,1h26v2H0V1z M0,12h26v2H0V12z M0,23h26v2H0V23z'/></svg>");*/
 }
 
-/* line 43, ../sass/_viewparent.scss */
+/* line 44, ../sass/_viewparent.scss */
 .clear {
   clear: both;
 }
