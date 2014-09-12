@@ -9,7 +9,7 @@ angular.module('newsaggregator.viewparent', [
     $scope.apiData = [];
     // $rootScope.tempArray = [];
 
-    Posts.get( /*$scope.apiRoute*/ ).then(function(response) {
+    Posts.get( $scope ).then(function(response) {
       // angular.forEach(response, function(value, key) {
       var postsArray = [];
 
@@ -17,30 +17,15 @@ angular.module('newsaggregator.viewparent', [
       var parsedLength = parsed.data.children.length;
 
       for (var i = 0; i < parsedLength; i++) {
-        var thisPostObject = parsed.data.children[0].data;
+        var thisPostObject = parsed.data.children[i].data;
         postsArray.push(thisPostObject);
       } // push all post objects to array
 
-      console.log('postsArray: ', postsArray);
-      $rootScope.tempArray = postsArray;
-      return postsArray;
+      $scope.apiData = $scope.makeConformantPosts(postsArray);
     }); // end Posts.get().then()
 
-    var makeConformantPosts = function(arrayOfPosts) {
+    $scope.makeConformantPosts = function(arrayOfPosts) {
       var result = [];
-      // var conformantObject = {
-      //   author: '',
-      //   created: '',
-      //   name: '',
-      //   permalink: '',
-      //   // selftext: '',
-      //   score: '',
-      //   subreddit: '',
-      //   thumbnail: '',
-      //   title: '',
-      //   url: '',
-      //   visited: ''
-      // };
 
       for (var i = 0; i < arrayOfPosts.length; i++) {
         var conformantObject = {
@@ -59,7 +44,7 @@ angular.module('newsaggregator.viewparent', [
         result.push(conformantObject);
       } // end (iterate over array)
       return result; // return arrays
-    }; // end makeConformantPosts(arrayOfPosts)
+    }; // end $scope.makeConformantPosts(arrayOfPosts)
 
 
   })
