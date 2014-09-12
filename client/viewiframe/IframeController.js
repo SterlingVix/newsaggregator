@@ -1,15 +1,12 @@
-angular.module('viewparent', []) // 'posts.directive', // 'getHTML'
-/* .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  $stateProvider
-    .state('home', {
-      url: '/',
-      // templateUrl: 'posts/posts.html',
-      // controller: 'PostsController'
-      templateUrl: 'viewparent/viewparent',
-      controller: 'viewparent/ParentController'
-    });
-  $urlRouterProvider.otherwise('/');
-}]) */
-.controller('ParentController', function($scope) {
+angular.module('viewparent.viewiframe', ['viewparent.viewfeed'])
+.controller('IframeController', function($scope) {
     $scope.someArray=[];
+})
+.directive('viewiframe', function() {
+  return {
+    restrict: 'E',
+    scope: {data: '='},
+    templateUrl: 'viewiframe/viewiframe.template.html',
+    replace: true
+  }; // end return for viewfeed
 });
