@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/Northern-Moose/newsaggregator",
   "dependencies": {
-    "angular": "~1.2.21",
     "angular-ui-router": "~0.2.10",
     "bookshelf": "~0.7.7",
     "cors": "^2.4.1",
