@@ -1,0 +1,35 @@
+// border-radius mixin is built into compass
+// @mixin border-radius($radius) {
+//   -webkit-border-radius: $radius;
+//   -moz-border-radius: $radius;
+//   -ms-border-radius: $radius;
+//   border-radius: $radius;
+// }
+
+// box-shadow mixin is built into compass
+// @mixin box-shadow($distance, $blur, $opacity) {
+//   -webkit-box-shadow: 0px $distance $blur 0px rgba(0, 0, 0, $opacity);
+//   -moz-box-shadow: 0px $distance $blur 0px rgba(0, 0, 0, $opacity);
+//   box-shadow: 0px $distance $blur 0px rgba(0, 0, 0, $opacity);
+// }
+
+@mixin z-depth-1() {
+  @include box-shadow(rgba(black, 0.24) 0px 1px 1px);
+  // @include box-shadow(1px, 1px, 0.24);
+}
+@mixin z-depth-2() {
+  @include box-shadow(rgba(black, 0.23) 0px 3px 3px);
+  // @include box-shadow(3px, 3px, 0.23);
+}
+@mixin z-depth-3() {
+  @include box-shadow(rgba(black, 0.23) 0px 6px 3px);
+  // @include box-shadow(6px, 3px, 0.23);
+}
+@mixin z-depth-4() {
+  @include box-shadow(rgba(black, 0.22) 0px 10px 5px);
+  // @include box-shadow(10px, 5px, 0.22);
+}
+@mixin z-depth-5() {
+  @include box-shadow(rgba(black, 0.22) 0px 15px 6px);
+  // @include box-shadow(15px, 6px, 0.22);
+}

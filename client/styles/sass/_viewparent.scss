@@ -1,0 +1,45 @@
+/* Box sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $gray-50;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+/* Top bar */
+.viewheader {
+  z-index: 1;
+  /*position: fixed;*/
+  left: 0;
+  right: 0;
+  background-color: $main-color;
+  color: white;
+  padding: 16px;
+  @include z-depth-2();
+
+  .title {
+    margin: 0;
+    display: inline;
+  }
+
+  .menu {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    border: 0;
+    background-size: 24px 24px;
+    background: transparent center center no-repeat;
+    background-image: url("http://material-design.storage.googleapis.com/images/hamburger.svg");
+    /*background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'><path fill='%23ffffff' d='M0,1h26v2H0V1z M0,12h26v2H0V12z M0,23h26v2H0V23z'/></svg>");*/
+  }
+}
+
+.clear {
+  clear: both;
+}
