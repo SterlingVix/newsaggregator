@@ -1,6 +1,7 @@
 angular.module('newsaggregator.viewparent', [
   'viewparent.viewheader',
   'viewparent.viewfeed',
+  // 'viewparent.viewfeed.viewpost',
   'viewparent.viewiframe',
 ])
 .controller('ParentController', [function($scope) {
