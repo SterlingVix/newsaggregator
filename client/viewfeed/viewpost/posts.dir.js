@@ -9,9 +9,7 @@ angular.module('posts.directive', [
 		return {
 			restrict: 'E',
 			templateUrl: './posts/posts.tpl.html',
-			scope: {
-				post: '='
-			}
+			scope: {post: '='}
 		};
 		console.log("domain: ",domain);
 	});

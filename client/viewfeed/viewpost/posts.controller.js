@@ -1,7 +1,7 @@
 angular.module('posts', [
   'posts.directive',
   'getHTML'
-  ])
+//   ])
 
   .controller('PostsController', function($scope, GetPosts) {
     $scope.post=[];
@@ -11,13 +11,6 @@ angular.module('posts', [
           $scope.post.push(value);
         })
       })
-
-      // success(function(posts) {
-      //   console.log("posts: ", posts);
-      //   // angular.forEach(posts.data.children, function(value, key) {
-      //   //   $scope.res.push(value.data);
-      //   // });
-      // });
     };
   getPosts();
 });

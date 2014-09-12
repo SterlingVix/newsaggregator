@@ -3,6 +3,7 @@ angular.module('newsaggregator', [
   'newsaggregator.viewparent',
   'viewparent.viewheader',
   'viewparent.viewfeed',
+  'viewparent.viewfeed.viewpost',
   'viewparent.viewiframe'
   // 'ngRoute'
 ])
@@ -22,8 +23,6 @@ angular.module('newsaggregator', [
   // $httpProvider.interceptors.push('AttatchTokens');
   
 }]);
-
-
 // .factory('GetPosts', function ($http, $q) {
 //   var gotten = function() {
 //     var deferred = $q.defer();
