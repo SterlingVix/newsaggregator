@@ -29,7 +29,9 @@
     "passport": "~0.2.0",
     "knex": "^0.6.22",
     "q": "^1.0.1",
-    "sqlite3": "~2.2.7"
+    "sqlite3": "~2.2.7",
+    "ejs": "~1.0.0",
+    "body-parser": "~1.8"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -38,8 +40,6 @@
     "grunt-contrib-uglify": "^0.5.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-nodemon": "^0.3.0",
-    "sqlite3": "~2.2.7",
-    "ejs": "~1.0.0",
-    "body-parser": "~1.8"
+    "sqlite3": "~2.2.7"
   }
 }
