@@ -1,5 +1,6 @@
 var http  = require('http'),
     // keys  = require('../keys.js'), // Aaron commented out because it's not working...?
+    key = process.env.keyNPR || '';
     defer = require('q').defer();
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
     var content = '';
 
     // testing with id=2 (2 = "All Things Considered" category)
-    http.get('http://api.npr.org/query?id=2&output=JSON&apiKey=' + keys.npr, function(nprRes) {
+    http.get('http://api.npr.org/query?id=2&output=JSON&apiKey=' + key, function(nprRes) {
       nprRes.on('data', function(chunk) {
         content += chunk;
       });
